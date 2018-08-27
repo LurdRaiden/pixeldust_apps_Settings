@@ -248,4 +248,9 @@ When the screen is off, the torch can be enabled with one of the following key c
     <string name="status_bar_battery_percent_text_next_left">Next to the icon (left)</string>
     <string name="status_bar_battery_text_charging_title">Battery percentage when charging</string>
     <string name="status_bar_battery_text_charging_summary">Always display battery percentage when charging</string>
+
+    <!-- Screen off animation -->
+    <string name="screen_off_animation_title">Screen off animation</string>
+    <string name="screen_off_animation_crt">CRT</string>
+    <string name="screen_off_animation_scale">Scale</string>
 </resources>
