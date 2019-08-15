@@ -178,4 +178,8 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="volume_steps_system_title">Lautstärkeschritte: System</string>
     <string name="volume_steps_voice_call_title">Lautstärkeschritte: Sprachanruf</string>
     <string name="volume_steps_reset">Zurücksetzen</string>
+
+    <!-- Hotspot extras -->
+    <string name="tethering_allow_vpn_upstreams_title">Clients gestatten VPNs zu verwenden</string>
+    <string name="tethering_allow_vpn_upstreams_summary">Hotspot-Clients gestatten, die VPN-Verbindungen des Geräts für Upstream-Konnektivität zu verwenden</string>
 </resources>
