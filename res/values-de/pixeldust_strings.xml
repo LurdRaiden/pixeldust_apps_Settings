@@ -182,4 +182,8 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <!-- Hotspot extras -->
     <string name="tethering_allow_vpn_upstreams_title">Clients gestatten VPNs zu verwenden</string>
     <string name="tethering_allow_vpn_upstreams_summary">Hotspot-Clients gestatten, die VPN-Verbindungen des Geräts für Upstream-Konnektivität zu verwenden</string>
+
+    <!-- Navigation bar hint -->
+    <string name="show_navbar_hint_title">Gesten-Navigationsleiste</string>
+    <string name="show_navbar_hint_summary">Horizontale Linie für die Gestenbedienung anzeigen</string>
 </resources>
