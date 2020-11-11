@@ -191,4 +191,9 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="gesture_navbar_length_title">Größe der Pille</string>
     <string name="hide_label">Unsichtbar</string>
     <string name="long_label">Lang</string>
+
+    <!-- Back gesture height -->
+    <string name="back_height_low_label">Ganzer Bildschirm</string>
+    <string name="back_height_high_label">Unterer Bereich</string>
+    <string name="back_height_message">Bereich festlegen, der für die Zurück-Geste verwendet wird.</string>
 </resources>
