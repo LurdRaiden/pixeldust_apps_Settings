@@ -344,4 +344,8 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <!-- Quick settings styles -->
     <string name="theme_customization_quicksettings_tiles_title">Schnelleinstellungen</string>
     <string name="theme_customization_quicksettings_tiles_summary">Stil für die QS-Kacheln festlegen</string>
+
+    <!-- Island notification reTicker -->
+    <string name="island_notification_title">Island Notification reTicker</string>
+    <string name="island_notification_summary">Ersetzt Pop-up-Benachrichtigungen durch eine schlanke und weniger aufdringliche Variante</string>
 </resources>
