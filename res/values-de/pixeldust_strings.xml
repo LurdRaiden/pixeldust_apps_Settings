@@ -209,4 +209,10 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="gesture_navbar_radius_title">Radius der Pille</string>
     <string name="thin_label">Dünn</string>
     <string name="thick_label">Dick</string>
+
+    <!-- VPN app management screen, global VPN -->
+    <string name="global_vpn_title">Globales VPN</string>
+    <string name="global_vpn_summary">Den gesamten Datenverkehr auf dem Gerät über dieses VPN erzwingen, einschließlich Arbeitsprofil und anderer Benutzer.</string>
+    <string name="global_vpn_summary_on">Den gesamten Datenverkehr auf dem Gerät über dieses VPN erzwingen, einschließlich Arbeitsprofil und anderer Benutzer. Hinweis: Wenn diese Option aktiviert ist, kannst Du kein separates VPN in einem Arbeitsprofil oder anderen Benutzern verwenden.</string>
+    <string name="global_vpn_summary_any_vpn_active">Du musst zuerst alle aktiven VPN-Verbindungen deaktivieren, um diese Option zu aktivieren.</string>
 </resources>
