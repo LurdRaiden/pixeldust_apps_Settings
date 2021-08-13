@@ -186,4 +186,9 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <!-- Navigation bar hint -->
     <string name="show_navbar_hint_title">Gesten-Navigationsleiste</string>
     <string name="show_navbar_hint_summary">Horizontale Linie für die Gestenbedienung anzeigen</string>
+
+    <!-- Gesture navbar length -->
+    <string name="gesture_navbar_length_title">Größe der Pille</string>
+    <string name="hide_label">Unsichtbar</string>
+    <string name="long_label">Lang</string>
 </resources>
