@@ -16,6 +16,12 @@
         <intent android:action="com.android.settings.action.STATUS_BAR_TUNER" />
     </Preference>
 
+    <com.pixeldust.support.preference.SystemSettingSwitchPreference
+        android:key="statusbar_colored_icons"
+        android:title="@string/statusbar_colored_icons_title"
+        android:summary="@string/statusbar_colored_icons_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:title="@string/clock_category_title">
 

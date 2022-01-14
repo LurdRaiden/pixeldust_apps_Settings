@@ -348,4 +348,8 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <!-- Island notification reTicker -->
     <string name="island_notification_title">Island Notification reTicker</string>
     <string name="island_notification_summary">Ersetzt Pop-up-Benachrichtigungen durch eine schlanke und weniger aufdringliche Variante</string>
+
+    <!-- Statusbar colored icons -->
+    <string name="statusbar_colored_icons_title">Ausgefüllte Symbole</string>
+    <string name="statusbar_colored_icons_summary">Farbige App-Symbole in der Statusleiste statt abstrakter Symbole verwenden</string>
 </resources>

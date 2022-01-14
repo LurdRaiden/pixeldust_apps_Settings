@@ -355,4 +355,8 @@ When the screen is off, the torch can be enabled with one of the following key c
     <!-- Island notification reTicker -->
     <string name="island_notification_title">Island notification reTicker</string>
     <string name="island_notification_summary">Replace heads-up notification with slim and less invasive version of redesigned ticker</string>
+
+    <!-- Statusbar colored icons -->
+    <string name="statusbar_colored_icons_title">Colored icons</string>
+    <string name="statusbar_colored_icons_summary">Use proper app icons for notification icons in status bar</string>
 </resources>
