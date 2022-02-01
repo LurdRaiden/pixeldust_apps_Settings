@@ -204,4 +204,9 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <!-- Back gesture haptic -->
     <string name="back_gesture_haptic_title">Haptik der Zurück-Geste</string>
     <string name="back_gesture_haptic_summary">Bei Nutzung der Zurück-Geste vibirieren</string>
+
+    <!-- Gesture navbar radius -->
+    <string name="gesture_navbar_radius_title">Radius der Pille</string>
+    <string name="thin_label">Dünn</string>
+    <string name="thick_label">Dick</string>
 </resources>
