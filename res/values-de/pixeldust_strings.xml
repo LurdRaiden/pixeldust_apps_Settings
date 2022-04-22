@@ -200,4 +200,8 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <!-- Back gesture animation -->
     <string name="back_gesture_arrow_title">Animation der Zurück-Geste</string>
     <string name="back_gesture_arrow_summary">Pfeil für die Zurück-Geste animieren</string>
+
+    <!-- Back gesture haptic -->
+    <string name="back_gesture_haptic_title">Haptik der Zurück-Geste</string>
+    <string name="back_gesture_haptic_summary">Bei Nutzung der Zurück-Geste vibirieren</string>
 </resources>
