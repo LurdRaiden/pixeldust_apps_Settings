@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2022-2023 The PixelDust Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="@string/powermenu_title">
+
+    <PreferenceCategory
+        android:title="@string/global_actions_menu_category"/>
+
+        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+            android:key="global_actions_emergency"
+            android:title="@string/global_actions_emergency"
+            android:defaultValue="true" />
+
+        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+            android:key="global_actions_lockdown"
+            android:title="@string/global_actions_lockdown"
+            android:defaultValue="true" />
+
+        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+            android:key="global_actions_power"
+            android:title="@string/global_actions_power"
+            android:defaultValue="true" />
+
+        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+            android:key="global_actions_restart"
+            android:title="@string/global_actions_restart"
+            android:defaultValue="true" />
+
+        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+            android:key="global_actions_logout"
+            android:title="@string/global_actions_logout"
+            android:defaultValue="false" />
+
+        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+            android:key="global_actions_users"
+            android:title="@string/global_actions_users"
+            android:defaultValue="false" />
+
+        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+            android:key="global_actions_screenshot"
+            android:title="@string/global_actions_screenshot"
+            android:defaultValue="false" />
+
+        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+            android:key="global_actions_airplane"
+            android:title="@string/global_actions_airplane"
+            android:defaultValue="false" />
+
+        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+            android:key="global_actions_soundpanel"
+            android:title="@string/global_actions_soundpanel"
+            android:defaultValue="false" />
+
+        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+            android:key="global_actions_settings"
+            android:title="@string/global_actions_settings"
+            android:defaultValue="false" />
+
+        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+            android:key="global_actions_device_controls"
+            android:title="@string/global_actions_device_controls"
+            android:defaultValue="false" />
+
+</PreferenceScreen>

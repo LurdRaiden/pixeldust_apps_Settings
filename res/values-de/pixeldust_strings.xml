@@ -352,4 +352,20 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <!-- Statusbar colored icons -->
     <string name="statusbar_colored_icons_title">Ausgefüllte Symbole</string>
     <string name="statusbar_colored_icons_summary">Farbige App-Symbole in der Statusleiste statt abstrakter Symbole verwenden</string>
+
+    <!-- Global Power Menu -->
+    <string name="powermenu_title">Ein-/Aus-Menü anpassen</string>
+    <string name="powermenu_summary">Zusätzliche Optionen für das Ein-/Aus-Menü festlegen</string>
+    <string name="global_actions_menu_category">Aktionen</string>
+    <string name="global_actions_emergency">Notfall</string>
+    <string name="global_actions_lockdown">Sperren</string>
+    <string name="global_actions_power">Ausschalten</string>
+    <string name="global_actions_restart">Neustart</string>
+    <string name="global_actions_logout">Abmelden</string>
+    <string name="global_actions_users">Benutzer wechseln</string>
+    <string name="global_actions_screenshot">Bildschirmfoto</string>
+    <string name="global_actions_airplane">Flugmodus</string>
+    <string name="global_actions_soundpanel">Soundpanel</string>
+    <string name="global_actions_settings">Einstellungen</string>
+    <string name="global_actions_device_controls">Gerätesteuerung</string>
 </resources>

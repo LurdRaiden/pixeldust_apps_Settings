@@ -18,10 +18,21 @@ package com.android.settings.gestures;
 
 import android.content.Context;
 
+import androidx.annotation.NonNull;
+
 import com.android.settings.R;
 import com.android.settings.core.BasePreferenceController;
+import com.android.settingslib.core.AbstractPreferenceController;
+
+import com.pixeldust.settings.gestures.powermenu.GlobalPowerMenuPreferenceController;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class PowerMenuPreferenceController extends BasePreferenceController {
+    private List<AbstractPreferenceController> mGestureControllers;
+
+    private static final String FAKE_PREF_KEY = "fake_key_only_for_get_available";
 
     public PowerMenuPreferenceController(Context context, String key) {
         super(context, key);
@@ -38,8 +49,30 @@ public class PowerMenuPreferenceController extends BasePreferenceController {
 
     @Override
     public int getAvailabilityStatus() {
-        return PowerMenuSettingsUtils.isLongPressPowerSettingAvailable(mContext)
+        if (mGestureControllers == null) {
+            mGestureControllers = buildAllPreferenceControllers(mContext);
+        }
+        boolean isAvailable = false;
+        for (AbstractPreferenceController controller : mGestureControllers) {
+            isAvailable = isAvailable || controller.isAvailable();
+        }
+        isAvailable = isAvailable || PowerMenuSettingsUtils.isLongPressPowerSettingAvailable(mContext);
+        return isAvailable
                 ? AVAILABLE
                 : UNSUPPORTED_ON_DEVICE;
+    }
+
+    /**
+     * Get all controllers for their availability status when doing getAvailabilityStatus.
+     * Do not use this method to add controllers into fragment, most of below controllers already
+     * convert to TogglePreferenceController, please register them in xml.
+     * The key is fake because those controllers won't be use to control preference.
+     */
+    private static List<AbstractPreferenceController> buildAllPreferenceControllers(
+            @NonNull Context context) {
+        final List<AbstractPreferenceController> controllers = new ArrayList<>();
+
+        controllers.add(new GlobalPowerMenuPreferenceController(context, FAKE_PREF_KEY));
+        return controllers;
     }
 }
