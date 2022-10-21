@@ -341,6 +341,10 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="status_bar_am_pm_title">AM/PM-Format</string>
     <string name="status_bar_am_pm_unavailable">24-Stunden-Format ist aktiviert</string>
 
+    <!-- Clock show seconds -->
+    <string name="status_bar_clock_show_seconds_title">Sekundenanzeige</string>
+    <string name="status_bar_clock_show_seconds_desc">Stunden, Minuten und Sekunden anzeigen</string>
+
     <!-- Brightness slider styles -->
     <string name="theme_customization_brightness_slider_title">Helligkeitsregler</string>
     <string name="theme_customization_brightness_slider_summary">Stil für den Helligkeitsregler festlegen</string>
