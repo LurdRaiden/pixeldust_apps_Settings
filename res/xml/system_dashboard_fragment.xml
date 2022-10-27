@@ -96,6 +96,14 @@
         android:fragment="com.pixeldust.settings.quicksettings.QuicksettingsSettings"/>
 
     <Preference
+        android:key="pulse_settings"
+        android:title="@string/pulse_settings"
+        android:summary="@string/pulse_settings_summary"
+        android:icon="@drawable/ic_settings_pulse"
+        android:order="-224"
+        android:fragment="com.pixeldust.settings.pulse.PulseSettings" />
+
+    <Preference
         android:key="default_usb_configuration"
         android:fragment="com.android.settings.connecteddevice.usb.UsbDefaultFragment"
         android:icon="@drawable/ic_usb_24"
