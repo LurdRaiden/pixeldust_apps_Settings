@@ -296,4 +296,12 @@ When the screen is off, the torch can be enabled with one of the following key c
     <string name="unit_pixels" translatable="false">dp</string>
     <string name="unit_seconds">seconds</string>
     <string name="unit_x1000ms" translatable="false">x1000 ms</string>
+
+    <!-- Pulse Gravity and mirror options -->
+    <string name="pulse_custom_gravity_title">Gravity</string>
+    <string name="pulse_custom_gravity_bottom">Bottom</string>
+    <string name="pulse_custom_gravity_top">Top</string>
+    <string name="pulse_custom_gravity_center">Center</string>
+    <string name="visualizer_center_mirrored_title">Center mirrored</string>
+    <string name="visualizer_center_mirrored_summary">Set the visualizer in center mirrored mode</string>
 </resources>
