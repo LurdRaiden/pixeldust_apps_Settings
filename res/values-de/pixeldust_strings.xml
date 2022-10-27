@@ -269,6 +269,8 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="pulse_lavalamp_speed_title">Lava-Lampe Geschwindigkeit</string>
     <string name="pulse_solid_units_count">Anzahl durchgezogener Linien</string>
     <string name="pulse_solid_units_opacity">Deckkraft der durchgezogenen Linien</string>
+    <string name="pulse_solid_units_rounded_title">Rundung</string>
+    <string name="pulse_solid_units_rounded_summary">Durchgezogene Linien mit abgerundeten Spitzen</string>
     <string name="pulse_solid_dimen_category">Moduseinstellungen für durchgezogene Linien</string>
     <string name="pulse_color_mode_title">Farbe</string>
     <string name="pulse_color_accent">Akzentfarbe</string>
@@ -282,4 +284,9 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="pulse_custom_div">Abstände der Balken</string>
     <string name="pulse_filled_block_size">Blockgröße</string>
     <string name="pulse_empty_block_size">Abstände der Blöcke</string>
+
+    <!-- Units -->
+    <string name="unit_milliseconds">Millisekunden</string>
+    <string name="unit_ms">ms</string>
+    <string name="unit_seconds">Sekunden</string>
 </resources>
