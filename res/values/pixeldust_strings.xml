@@ -340,4 +340,8 @@ When the screen is off, the torch can be enabled with one of the following key c
     <string name="quick_pulldown_right">Pulldown statusbar from right side</string>
     <string name="quick_pulldown_left">Pulldown statusbar from left side</string>
     <string name="quick_pulldown_always">Pulldown statusbar anywhere</string>
+
+    <!-- Hide status bar on lock screen -->
+    <string name="hide_lockscreen_status_bar_title">Hide status bar</string>
+    <string name="hide_lockscreen_status_bar_summary">Hide status bar on lock screen</string>
 </resources>

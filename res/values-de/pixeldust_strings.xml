@@ -333,4 +333,8 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="quick_pulldown_right">Statusleiste von rechts nach unten ziehen</string>
     <string name="quick_pulldown_left">Statusleiste von links nach unten ziehen</string>
     <string name="quick_pulldown_always">Statusleiste nach unten ziehen</string>
+
+    <!-- Hide status bar on lock screen -->
+    <string name="hide_lockscreen_status_bar_title">Statusleiste ausblenden</string>
+    <string name="hide_lockscreen_status_bar_summary">Statusleiste auf dem Sperrbildschirm ausblenden</string>
 </resources>

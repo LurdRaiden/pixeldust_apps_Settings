@@ -50,4 +50,10 @@
             android:summary="@string/status_bar_battery_text_charging_summary"
             android:defaultValue="true" />
     </PreferenceCategory>
+
+    <com.pixeldust.support.preference.SystemSettingSwitchPreference
+        android:key="lockscreen_hide_status_bar"
+        android:title="@string/hide_lockscreen_status_bar_title"
+        android:summary="@string/hide_lockscreen_status_bar_summary"
+        android:defaultValue="false" />
 </PreferenceScreen>
