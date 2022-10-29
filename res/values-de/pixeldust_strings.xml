@@ -162,4 +162,8 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <!-- Quick unlock -->
     <string name="unlock_quick_unlock_control_title">Schnelles Entsperren</string>
     <string name="unlock_quick_unlock_control_summary">Automatisch entsperren bei korrekter PIN-/Passworteingabe</string>
+
+    <!-- Lockscreen battery info indicator  -->
+    <string name="lockscreen_battery_info_title">Erweiterter Status beim Ladevorgang</string>
+    <string name="lockscreen_battery_info_summary">Zeigt auf dem Sperrbildschirm die vom System ermittelte Stromstärke, Ladespannung, Wattanzahl und Akkutemperatur während des Ladevorgangs an</string>
 </resources>
