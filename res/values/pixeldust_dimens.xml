@@ -10,4 +10,7 @@
     <dimen name="contextual_card_stroke_width">1dp</dimen>
     <dimen name="storage_card_min_width">148dp</dimen>
     <dimen name="storage_card_min_height">@dimen/storage_card_min_width</dimen>
+
+    <!-- Dimensions for Contextual Card -->
+    <dimen name="contextual_card_content_padding">13dp</dimen>
 </resources>
