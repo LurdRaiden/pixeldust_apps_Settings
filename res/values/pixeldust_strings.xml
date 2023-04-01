@@ -87,6 +87,10 @@ When the screen is off, the torch can be enabled with one of the following key c
     <string name="theme_customization_device_default">Device default</string>
     <string name="theme_customization_navbar_title">Navbar style</string>
     <string name="theme_customization_navbar_summary">Set custom 3-button navbar style</string>
+    <string name="volte_icon_title">VoLTE icon</string>
+    <string name="volte_icon_summary">Display VoLTE icon when available</string>
+    <string name="vowifi_icon_title">VoWiFi icon</string>
+    <string name="vowifi_icon_summary">Display VoWiFi icon when available</string>
 
     <!-- Black theme -->
     <string name="system_black_theme_title">Use black theme</string>
