@@ -206,8 +206,10 @@ public class SoundSettings extends DashboardFragment implements OnActivityResult
                 use(HandsFreeProfileOutputPreferenceController.class).getPreferenceKey();
 
         for (VolumeSeekBarPreferenceController controller : volumeControllers) {
-            controller.setCallback(mVolumeCallback);
-            getSettingsLifecycle().addObserver(controller);
+            if (controller != null) {
+                controller.setCallback(mVolumeCallback);
+                getSettingsLifecycle().addObserver(controller);
+            }
         }
     }
 
