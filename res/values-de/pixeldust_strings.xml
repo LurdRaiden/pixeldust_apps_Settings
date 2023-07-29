@@ -434,4 +434,7 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <!-- Navbar Animation -->
     <string name="pixel_navbar_anim_title">Pixel-Animation</string>
     <string name="pixel_navbar_anim_summary">Pixel-Animation für den Home-Button aktivieren</string>
+
+    <!-- QS Header image -->
+    <string name="qs_header_image_title">Hintergrundgrafik auswählen</string>
 </resources>
