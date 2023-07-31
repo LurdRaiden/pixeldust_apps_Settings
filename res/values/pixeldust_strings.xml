@@ -349,4 +349,8 @@ When the screen is off, the torch can be enabled with one of the following key c
     <string name="clock_category_title">Clock</string>
     <string name="statusbar_clock_chip_title">Background chip</string>
     <string name="statusbar_clock_chip_summary">Display accented chip behind clock</string> 
+
+    <!-- Brightness slider styles -->
+    <string name="theme_customization_brightness_slider_title">Brightness slider style</string>
+    <string name="theme_customization_brightness_slider_summary">Set custom brightness slider style</string>
 </resources>

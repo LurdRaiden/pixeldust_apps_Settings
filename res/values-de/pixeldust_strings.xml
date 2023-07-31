@@ -342,4 +342,8 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="clock_category_title">Uhranzeige</string>
     <string name="statusbar_clock_chip_title">Hintergrundchip anzeigen</string>
     <string name="statusbar_clock_chip_summary">Akzentfarbigen Chip hinter der Uhr anzeigen</string>
+
+    <!-- Brightness slider styles -->
+    <string name="theme_customization_brightness_slider_title">Helligkeitsregler</string>
+    <string name="theme_customization_brightness_slider_summary">Stil für den Helligkeitsregler festlegen</string>
 </resources>
