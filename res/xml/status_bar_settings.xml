@@ -17,6 +17,16 @@
     </Preference>
 
     <PreferenceCategory
+        android:title="@string/clock_category_title">
+
+        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+            android:key="statusbar_clock_chip"
+            android:title="@string/statusbar_clock_chip_title"
+            android:summary="@string/statusbar_clock_chip_summary"
+            android:defaultValue="false" />
+    </PreferenceCategory>
+
+    <PreferenceCategory
         android:title="@string/network_traffic_title">
 
         <Preference

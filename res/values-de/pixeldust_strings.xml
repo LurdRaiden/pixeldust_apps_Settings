@@ -337,4 +337,9 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <!-- Hide status bar on lock screen -->
     <string name="hide_lockscreen_status_bar_title">Statusleiste ausblenden</string>
     <string name="hide_lockscreen_status_bar_summary">Statusleiste auf dem Sperrbildschirm ausblenden</string>
+
+    <!-- Statusbar Clock background chip -->
+    <string name="clock_category_title">Uhranzeige</string>
+    <string name="statusbar_clock_chip_title">Hintergrundchip anzeigen</string>
+    <string name="statusbar_clock_chip_summary">Akzentfarbigen Chip hinter der Uhr anzeigen</string>
 </resources>

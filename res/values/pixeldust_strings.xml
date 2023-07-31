@@ -344,4 +344,9 @@ When the screen is off, the torch can be enabled with one of the following key c
     <!-- Hide status bar on lock screen -->
     <string name="hide_lockscreen_status_bar_title">Hide status bar</string>
     <string name="hide_lockscreen_status_bar_summary">Hide status bar on lock screen</string>
+
+    <!-- Statusbar Clock background chip -->
+    <string name="clock_category_title">Clock</string>
+    <string name="statusbar_clock_chip_title">Background chip</string>
+    <string name="statusbar_clock_chip_summary">Display accented chip behind clock</string> 
 </resources>
