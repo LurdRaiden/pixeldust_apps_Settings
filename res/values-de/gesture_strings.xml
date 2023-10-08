@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2023 The PixelDust Project
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Category Title text for back gesture edge lock. [CHAR LIMIT=60] -->
+    <string name="gesture_navigation_settings_category_title">Gesten-Bedienung anpassen</string>
+    <!-- Title text for immersive ui lock. [CHAR LIMIT=60] -->
+    <string name="lock_immersive_system_ui_title">Vollbildmodus</string>
+    <!-- Summary text for immersive ui lock. [CHAR LIMIT=NONE] -->
+    <string name="lock_immersive_system_ui_summary">Statusleiste und Navigationsleiste im Vollbildmodus deaktivieren.</string>
+    <!-- Title text for back gesture edge lock. [CHAR LIMIT=60] -->
+    <string name="lock_edge_back_gesture_title">Touch-Geste sperren</string>
+    <!-- Summary text for sback gesture edge lock. [CHAR LIMIT=NONE] -->
+    <string name="lock_edge_back_gesture_summary">Zurück wischen vom Bildschirmrand deaktivieren.</string>
+</resources>
