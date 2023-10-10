@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Title text for quickswitch feature. [CHAR LIMIT=60] -->
+    <string name="quickswitch_launcher_title">QuickSwitch</string>
+    <!-- Summary text for quickswitch feature.. [CHAR LIMIT=NONE] -->
+    <string name="quickswitch_launcher_summary">Standard-Homescreen-Anwendung festlegen.</string>
+</resources>
