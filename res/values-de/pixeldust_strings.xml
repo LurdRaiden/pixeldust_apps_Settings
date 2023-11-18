@@ -222,6 +222,15 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="status_bar_battery_style_icon_portrait">Symbol (Hochformat)</string>
     <string name="status_bar_battery_style_icon_rlandscape">Querformat-Symbol (Rechts)</string>
     <string name="status_bar_battery_style_icon_landscape">Querformat-Symbol (Links)</string>
+    <string name="status_bar_battery_style_icon_rlandscape_style_a">Querformat R Stil A</string>
+    <string name="status_bar_battery_style_icon_landscape_style_a">Querformat L Stil A</string>
+    <string name="status_bar_battery_style_icon_rlandscape_style_b">Querformat R Stil B</string>
+    <string name="status_bar_battery_style_icon_landscape_style_b">Querformat L Stil B</string>
+    <string name="status_bar_battery_style_icon_landscape_pill">Hochformat Mx</string>
+    <string name="status_bar_battery_style_icon_landscape_line">Querformat Lorn</string>
+    <string name="status_bar_battery_style_icon_landscape_musku">iOS Hochformat</string>
+    <string name="status_bar_battery_style_icon_landscape_signal">Querformat Airoo</string>
+    <string name="status_bar_battery_style_icon_landscape_buddy">Querformat Kapsel</string>
     <string name="status_bar_battery_style_circle">Kreis</string>
     <string name="status_bar_battery_style_dotted_circle">Kreis (gepunktet)</string>
     <string name="status_bar_battery_style_big_circle">Kreis (groß)</string>
