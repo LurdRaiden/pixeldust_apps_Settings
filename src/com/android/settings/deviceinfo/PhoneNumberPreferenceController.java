@@ -95,7 +95,6 @@ public class PhoneNumberPreferenceController extends BasePreferenceController {
             multiSimPreference.setCopyingEnabled(true);
             multiSimPreference.setOrder(phonePreferenceOrder + simSlotNumber);
             multiSimPreference.setKey(KEY_PHONE_NUMBER + simSlotNumber);
-            category.addPreference(multiSimPreference);
             mPreferenceList.add(multiSimPreference);
         }
     }
