@@ -14,190 +14,260 @@
  * limitations under the License.
  */
 
-package com.android.settings.deviceinfo.aboutphone;
+ package com.android.settings.deviceinfo.aboutphone;
 
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.settings.SettingsEnums;
-import android.content.Context;
-import android.content.Intent;
-import android.content.pm.UserInfo;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
-import android.os.UserManager;
-import android.view.View;
-
-import com.android.settings.R;
-import com.android.settings.Utils;
-import com.android.settings.dashboard.DashboardFragment;
-import com.android.settings.deviceinfo.BluetoothAddressPreferenceController;
-import com.android.settings.deviceinfo.BuildNumberPreferenceController;
-import com.android.settings.deviceinfo.DeviceNamePreferenceController;
-import com.android.settings.deviceinfo.FccEquipmentIdPreferenceController;
-import com.android.settings.deviceinfo.FeedbackPreferenceController;
-import com.android.settings.deviceinfo.IpAddressPreferenceController;
-import com.android.settings.deviceinfo.ManualPreferenceController;
-import com.android.settings.deviceinfo.RegulatoryInfoPreferenceController;
-import com.android.settings.deviceinfo.SafetyInfoPreferenceController;
-import com.android.settings.deviceinfo.UptimePreferenceController;
-import com.android.settings.deviceinfo.WifiMacAddressPreferenceController;
-import com.android.settings.deviceinfo.imei.ImeiInfoPreferenceController;
-import com.android.settings.deviceinfo.simstatus.EidStatus;
-import com.android.settings.deviceinfo.simstatus.SimEidPreferenceController;
-import com.android.settings.deviceinfo.simstatus.SimStatusPreferenceController;
-import com.android.settings.deviceinfo.simstatus.SlotSimStatus;
-import com.android.settings.search.BaseSearchIndexProvider;
-import com.android.settings.widget.EntityHeaderController;
-import com.android.settingslib.core.AbstractPreferenceController;
-import com.android.settingslib.core.lifecycle.Lifecycle;
-import com.android.settingslib.search.SearchIndexable;
-import com.android.settingslib.widget.LayoutPreference;
-
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.function.Consumer;
-
-@SearchIndexable
-public class MyDeviceInfoFragment extends DashboardFragment
-        implements DeviceNamePreferenceController.DeviceNamePreferenceHost {
-
-    private static final String LOG_TAG = "MyDeviceInfoFragment";
-    private static final String KEY_EID_INFO = "eid_info";
-
-    private BuildNumberPreferenceController mBuildNumberPreferenceController;
-
+ import android.app.ActionBar;
+ import android.app.Activity;
+ import android.app.settings.SettingsEnums;
+ import android.content.Context;
+ import android.content.Intent;
+ import android.content.pm.UserInfo;
+ import android.graphics.drawable.ColorDrawable;
+ import android.os.Bundle;
+ import android.os.UserManager;
+ import android.view.View;
+ 
+ import com.android.settings.R;
+ import android.os.Bundle;
+ import android.os.UserHandle;
+ import android.view.View;
+ import android.content.Context;
+ import android.provider.Settings;
+ import androidx.preference.Preference;
+ import androidx.preference.PreferenceScreen;
+ import com.android.settings.Utils;
+ import com.android.settings.dashboard.DashboardFragment;
+ import com.android.settings.deviceinfo.BluetoothAddressPreferenceController;
+ import com.android.settings.deviceinfo.BuildNumberPreferenceController;
+ import com.android.settings.deviceinfo.DeviceNamePreferenceController;
+ import com.android.settings.deviceinfo.FccEquipmentIdPreferenceController;
+ import com.android.settings.deviceinfo.FeedbackPreferenceController;
+ import com.android.settings.deviceinfo.IpAddressPreferenceController;
+ import com.android.settings.deviceinfo.ManualPreferenceController;
+ import com.android.settings.deviceinfo.RegulatoryInfoPreferenceController;
+ import com.android.settings.deviceinfo.SafetyInfoPreferenceController;
+ import com.android.settings.deviceinfo.UptimePreferenceController;
+ import com.android.settings.deviceinfo.WifiMacAddressPreferenceController;
+ import com.android.settings.deviceinfo.imei.ImeiInfoPreferenceController;
+ import com.android.settings.deviceinfo.simstatus.EidStatus;
+ import com.android.settings.deviceinfo.simstatus.SimEidPreferenceController;
+ import com.android.settings.deviceinfo.simstatus.SimStatusPreferenceController;
+ import com.android.settings.deviceinfo.simstatus.SlotSimStatus;
+ import com.android.settings.search.BaseSearchIndexProvider;
+ import com.android.settings.widget.EntityHeaderController;
+ import com.android.settingslib.core.AbstractPreferenceController;
+ import com.android.settingslib.core.lifecycle.Lifecycle;
+ import com.android.settingslib.search.SearchIndexable;
+ import com.android.settingslib.widget.LayoutPreference;
+ 
+ import java.util.ArrayList;
+ import java.util.List;
+ import java.util.concurrent.ExecutorService;
+ import java.util.concurrent.Executors;
+ import java.util.function.Consumer;
+ 
+ @SearchIndexable
+ public class MyDeviceInfoFragment extends DashboardFragment
+         implements DeviceNamePreferenceController.DeviceNamePreferenceHost {
+ 
+     private static final String LOG_TAG = "MyDeviceInfoFragment";
+     private static final String KEY_EID_INFO = "eid_info";
+     private int mDashBoardStyle;
+     private BuildNumberPreferenceController mBuildNumberPreferenceController;
+ 
+     @Override
+     public int getMetricsCategory() {
+         return SettingsEnums.DEVICEINFO;
+     }
+ 
+     @Override
+     public int getHelpResource() {
+         return R.string.help_uri_about;
+     }
+ 
+     @Override
+     public void onAttach(Context context) {
+         super.onAttach(context);
+         use(DeviceNamePreferenceController.class).setHost(this /* parent */);
+         mBuildNumberPreferenceController = use(BuildNumberPreferenceController.class);
+         mBuildNumberPreferenceController.setHost(this /* parent */);
+     }
+ 
     @Override
-    public int getMetricsCategory() {
-        return SettingsEnums.DEVICEINFO;
-    }
-
-    @Override
-    public int getHelpResource() {
-        return R.string.help_uri_about;
-    }
-
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        use(DeviceNamePreferenceController.class).setHost(this /* parent */);
-        mBuildNumberPreferenceController = use(BuildNumberPreferenceController.class);
-        mBuildNumberPreferenceController.setHost(this /* parent */);
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        initActionbar();
-    }
-
-    @Override
-    protected String getLogTag() {
-        return LOG_TAG;
-    }
-
-    @Override
-    protected int getPreferenceScreenResId() {
-        return R.xml.my_device_info;
-    }
-
-    @Override
-    protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
-        return buildPreferenceControllers(context, this /* fragment */, getSettingsLifecycle());
-    }
-
-    private static List<AbstractPreferenceController> buildPreferenceControllers(
-            Context context, MyDeviceInfoFragment fragment, Lifecycle lifecycle) {
-        final List<AbstractPreferenceController> controllers = new ArrayList<>();
-
-        final ExecutorService executor = (fragment == null) ? null :
-                Executors.newSingleThreadExecutor();
-        androidx.lifecycle.Lifecycle lifecycleObject = (fragment == null) ? null :
-                fragment.getLifecycle();
-        final SlotSimStatus slotSimStatus = new SlotSimStatus(context, executor, lifecycleObject);
-
-        controllers.add(new IpAddressPreferenceController(context, lifecycle));
-        controllers.add(new WifiMacAddressPreferenceController(context, lifecycle));
-        controllers.add(new BluetoothAddressPreferenceController(context, lifecycle));
-        controllers.add(new RegulatoryInfoPreferenceController(context));
-        controllers.add(new SafetyInfoPreferenceController(context));
-        controllers.add(new ManualPreferenceController(context));
-        controllers.add(new FeedbackPreferenceController(fragment, context));
-        controllers.add(new FccEquipmentIdPreferenceController(context));
-        controllers.add(new UptimePreferenceController(context, lifecycle));
-
-        Consumer<String> imeiInfoList = imeiKey -> {
-            ImeiInfoPreferenceController imeiRecord =
-                    new ImeiInfoPreferenceController(context, imeiKey);
-            imeiRecord.init(fragment, slotSimStatus);
-            controllers.add(imeiRecord);
-        };
-
-        if (fragment != null) {
-            imeiInfoList.accept(ImeiInfoPreferenceController.DEFAULT_KEY);
-        }
-
-        for (int slotIndex = 0; slotIndex < slotSimStatus.size(); slotIndex ++) {
-            SimStatusPreferenceController slotRecord =
-                    new SimStatusPreferenceController(context,
-                    slotSimStatus.getPreferenceKey(slotIndex));
-            slotRecord.init(fragment, slotSimStatus);
-            controllers.add(slotRecord);
-
-            if (fragment != null) {
-                imeiInfoList.accept(ImeiInfoPreferenceController.DEFAULT_KEY + (1 + slotIndex));
-            }
-        }
-
-        EidStatus eidStatus = new EidStatus(slotSimStatus, context, executor);
-        SimEidPreferenceController simEid = new SimEidPreferenceController(context, KEY_EID_INFO);
-        simEid.init(slotSimStatus, eidStatus);
-        controllers.add(simEid);
-
-        if (executor != null) {
-            executor.shutdown();
-        }
-        return controllers;
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
-        if (mBuildNumberPreferenceController.onActivityResult(requestCode, resultCode, data)) {
-            return;
-        }
-        super.onActivityResult(requestCode, resultCode, data);
-    }
-
-    private void initActionbar() {
-        final ActionBar actionBar = getActivity().getActionBar();
-        if (actionBar == null) {
-            return;
-        }
-        actionBar.setDisplayHomeAsUpEnabled(true);
-    }
-
-    @Override
-    public void showDeviceNameWarningDialog(String deviceName) {
-        DeviceNameWarningDialog.show(this);
-    }
-
-    public void onSetDeviceNameConfirm(boolean confirm) {
-        final DeviceNamePreferenceController controller = use(DeviceNamePreferenceController.class);
-        controller.updateDeviceName(confirm);
-    }
-
-    /**
-     * For Search.
-     */
-    public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
-            new BaseSearchIndexProvider(R.xml.my_device_info) {
-
-                @Override
-                public List<AbstractPreferenceController> createPreferenceControllers(
-                        Context context) {
-                    return buildPreferenceControllers(context, null /* fragment */,
-                            null /* lifecycle */);
-                }
-            };
-}
+     public void onCreate(Bundle icicle) {
+         super.onCreate(icicle);
+         setDashboardStyle();
+     }
+ 
+    public void onResume() {
+         super.onResume();
+         setDashboardStyle();
+     }
+ 
+     @Override
+     public void onStart() {
+         super.onStart();
+         initActionbar();
+     }
+ 
+     @Override
+     protected String getLogTag() {
+         return LOG_TAG;
+     }
+ 
+     @Override
+     protected int getPreferenceScreenResId() {
+         return R.xml.my_device_info;
+     }
+ 
+ 
+     private void setDashboardStyle() {
+         int mDashBoardStyle = geSettingstDashboardStyle();
+         final PreferenceScreen mScreen = getPreferenceScreen();
+         final int mCount = mScreen.getPreferenceCount();
+ 
+         for (int i = 0; i < mCount; i++) {
+             final Preference mPreference = mScreen.getPreference(i);
+             if (mPreference == null) continue;
+ 
+             String mKey = mPreference.getKey();
+             if (mKey == null) continue;
+ 
+             if (mDashBoardStyle == 1 ) { // 0=stock aosp, 1=dot
+                if (mKey.equals("device_name")) {
+                    mPreference.setLayoutResource(R.layout.dot_blank); 
+                } else  if (
+                     mKey.equals("wifi_ip_address") 
+                 ) {
+                     mPreference.setLayoutResource(R.layout.dot_top_no_chevron);
+                 } else if (
+                     mKey.equals("phone_number")
+                 ) {
+                     mPreference.setLayoutResource(R.layout.dot_bottom_no_chevron);
+                 }else if (
+                    mKey.equals("build_number")
+                   || mKey.equals("saved_accesspoints_wifi_mac_address")
+                ) {
+                    mPreference.setLayoutResource(R.layout.dot_dashboard_preference_middle);
+                } else if (
+                    mKey.equals("branded_account")
+                   || mKey.equals("device_model") 
+                ) {
+                    mPreference.setLayoutResource(R.layout.dot_dashboard_preference_top);
+                } else if (
+                    mKey.equals("firmware_version")
+                    || mKey.equals("build_number")
+                ) {
+                    mPreference.setLayoutResource(R.layout.dot_dashboard_preference_bottom);
+                } else {
+                     mPreference.setLayoutResource(R.layout.dot_middle_no_chevron); 
+                 } 
+             } 
+         }
+     }
+ 
+     private int geSettingstDashboardStyle() {
+         return Settings.System.getIntForUser(getContext().getContentResolver(),
+                 Settings.System.SETTINGS_DASHBOARD_STYLE, 1, UserHandle.USER_CURRENT);
+     }
+ 
+     @Override
+     protected List<AbstractPreferenceController> createPreferenceControllers(Context context) {
+         return buildPreferenceControllers(context, this /* fragment */, getSettingsLifecycle());
+     }
+ 
+     private static List<AbstractPreferenceController> buildPreferenceControllers(
+             Context context, MyDeviceInfoFragment fragment, Lifecycle lifecycle) {
+         final List<AbstractPreferenceController> controllers = new ArrayList<>();
+ 
+         final ExecutorService executor = (fragment == null) ? null :
+                 Executors.newSingleThreadExecutor();
+         androidx.lifecycle.Lifecycle lifecycleObject = (fragment == null) ? null :
+                 fragment.getLifecycle();
+         final SlotSimStatus slotSimStatus = new SlotSimStatus(context, executor, lifecycleObject);
+ 
+         controllers.add(new IpAddressPreferenceController(context, lifecycle));
+         controllers.add(new WifiMacAddressPreferenceController(context, lifecycle));
+         controllers.add(new BluetoothAddressPreferenceController(context, lifecycle));
+         controllers.add(new RegulatoryInfoPreferenceController(context));
+         controllers.add(new SafetyInfoPreferenceController(context));
+         controllers.add(new ManualPreferenceController(context));
+         controllers.add(new FeedbackPreferenceController(fragment, context));
+         controllers.add(new FccEquipmentIdPreferenceController(context));
+         controllers.add(new UptimePreferenceController(context, lifecycle));
+ 
+         Consumer<String> imeiInfoList = imeiKey -> {
+             ImeiInfoPreferenceController imeiRecord =
+                     new ImeiInfoPreferenceController(context, imeiKey);
+             imeiRecord.init(fragment, slotSimStatus);
+             controllers.add(imeiRecord);
+         };
+ 
+         if (fragment != null) {
+             imeiInfoList.accept(ImeiInfoPreferenceController.DEFAULT_KEY);
+         }
+ 
+         for (int slotIndex = 0; slotIndex < slotSimStatus.size(); slotIndex ++) {
+             SimStatusPreferenceController slotRecord =
+                     new SimStatusPreferenceController(context,
+                     slotSimStatus.getPreferenceKey(slotIndex));
+             slotRecord.init(fragment, slotSimStatus);
+             controllers.add(slotRecord);
+ 
+             if (fragment != null) {
+                 imeiInfoList.accept(ImeiInfoPreferenceController.DEFAULT_KEY + (1 + slotIndex));
+             }
+         }
+ 
+         EidStatus eidStatus = new EidStatus(slotSimStatus, context, executor);
+         SimEidPreferenceController simEid = new SimEidPreferenceController(context, KEY_EID_INFO);
+         simEid.init(slotSimStatus, eidStatus);
+         controllers.add(simEid);
+ 
+         if (executor != null) {
+             executor.shutdown();
+         }
+         return controllers;
+     }
+ 
+     @Override
+     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+         if (mBuildNumberPreferenceController.onActivityResult(requestCode, resultCode, data)) {
+             return;
+         }
+         super.onActivityResult(requestCode, resultCode, data);
+     }
+ 
+     private void initActionbar() {
+         final ActionBar actionBar = getActivity().getActionBar();
+         if (actionBar == null) {
+             return;
+         }
+         actionBar.setDisplayHomeAsUpEnabled(true);
+     }
+ 
+     @Override
+     public void showDeviceNameWarningDialog(String deviceName) {
+         DeviceNameWarningDialog.show(this);
+     }
+ 
+     public void onSetDeviceNameConfirm(boolean confirm) {
+         final DeviceNamePreferenceController controller = use(DeviceNamePreferenceController.class);
+         controller.updateDeviceName(confirm);
+     }
+ 
+     /**
+      * For Search.
+      */
+     public static final BaseSearchIndexProvider SEARCH_INDEX_DATA_PROVIDER =
+             new BaseSearchIndexProvider(R.xml.my_device_info) {
+ 
+                 @Override
+                 public List<AbstractPreferenceController> createPreferenceControllers(
+                         Context context) {
+                     return buildPreferenceControllers(context, null /* fragment */,
+                             null /* lifecycle */);
+                 }
+             };
+ }
+ 
