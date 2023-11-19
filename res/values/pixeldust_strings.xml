@@ -346,4 +346,8 @@ When the screen is off, the torch can be enabled with one of the following key c
     <!-- Brightness slider styles -->
     <string name="theme_customization_brightness_slider_title">Brightness slider style</string>
     <string name="theme_customization_brightness_slider_summary">Set custom brightness slider style</string>
+
+    <!-- Quick settings styles -->
+    <string name="theme_customization_quicksettings_tiles_title">QS tiles style</string>
+    <string name="theme_customization_quicksettings_tiles_summary">Set custom QS tiles style</string>
 </resources>

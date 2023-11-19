@@ -339,4 +339,8 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <!-- Brightness slider styles -->
     <string name="theme_customization_brightness_slider_title">Helligkeitsregler</string>
     <string name="theme_customization_brightness_slider_summary">Stil für den Helligkeitsregler festlegen</string>
+
+    <!-- Quick settings styles -->
+    <string name="theme_customization_quicksettings_tiles_title">Schnelleinstellungen</string>
+    <string name="theme_customization_quicksettings_tiles_summary">Stil für die QS-Kacheln festlegen</string>
 </resources>
