@@ -300,13 +300,6 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="pulse_vertical_mirror_title">Vertikal gespiegelt</string>
     <string name="pulse_vertical_mirror_summary">Erzeugt einen weiteren Pulse, der vertikal gedreht ist</string>
 
-    <!-- Quick settings styles -->
-    <string name="default_string">Standard</string>
-    <string name="qs_styles_title">Layout für QS-Kacheln</string>
-    <string name="qs_outline">Outline</string>
-    <string name="qs_two_tone">Zweifarbiger Akzent</string>
-    <string name="qs_shaded">Schattiert</string>
-
     <!-- Monet settings -->
     <string name="monet_settings_title">Erweiterte Monet-Einstellungen</string>
     <string name="monet_settings_summary">UI-Anpassungen für die Monet-Engine</string>
