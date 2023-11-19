@@ -249,6 +249,7 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="screen_off_animation_title">Ausschaltanimation</string>
     <string name="screen_off_animation_crt">Röhrenbildschirm (CRT)</string>
     <string name="screen_off_animation_scale">Skalierung</string>
+    <string name="default_string">Standard</string>
 
    <!-- Pulse music visualizer -->
     <string name="pulse_help_policy_notice_title">Über Pulse</string>
