@@ -4,5 +4,7 @@
     <!-- Title text for quickswitch feature. [CHAR LIMIT=60] -->
     <string name="quickswitch_launcher_title">QuickSwitch</string>
     <!-- Summary text for quickswitch feature.. [CHAR LIMIT=NONE] -->
-    <string name="quickswitch_launcher_summary">Standard-Homescreen-Anwendung festlegen.</string>
+    <string name="quickswitch_launcher_summary">Standard-Launcher festlegen.</string>
+    <!-- Toast message for quickswitch feature. [CHAR LIMIT=60] -->
+    <string name="quickswitch_launcher_toast">Dieser Launcher ist derzeit nicht installiert.</string>
 </resources>

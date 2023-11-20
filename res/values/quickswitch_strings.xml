@@ -22,4 +22,6 @@
     <string name="quickswitch_launcher_title">QuickSwitch</string>
     <!-- Summary text for quickswitch feature.. [CHAR LIMIT=NONE] -->
     <string name="quickswitch_launcher_summary">Set default homescreen application.</string>
+    <!-- Toast message for quickswitch feature. [CHAR LIMIT=60] -->
+    <string name="quickswitch_launcher_toast">This homescreen application is currently not installed.</string>
 </resources>

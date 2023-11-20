@@ -17,9 +17,21 @@
 package com.android.settings.applications;
 
 import android.app.settings.SettingsEnums;
+import android.content.ContentResolver;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.os.Bundle;
+import android.os.SystemProperties;
 import android.provider.SearchIndexableResource;
+import android.widget.Toast;
 
+import androidx.preference.ListPreference;
+import androidx.preference.Preference.OnPreferenceChangeListener;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceScreen;
+
+import com.android.internal.util.custom.systemUtils;
+import com.android.internal.util.pixeldust.PixeldustUtils;
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.settings.search.BaseSearchIndexProvider;
@@ -32,15 +44,69 @@ import java.util.List;
 
 /** Settings page for apps. */
 @SearchIndexable
-public class AppDashboardFragment extends DashboardFragment {
+public class AppDashboardFragment extends DashboardFragment implements
+        OnPreferenceChangeListener {
 
     private static final String TAG = "AppDashboardFragment";
     private AppsPreferenceController mAppsPreferenceController;
+
+    private static final String QUICKSWITCH_LAUNCHER_KEY = "quickswitch_default_launcher";
+    private static final String SYS_DEFAULT_LAUNCHER_KEY = "persist.sys.default_launcher";
+    private ListPreference mQuickSwitchLauncherPref;
+
+    private SharedPreferences preferences;
 
     private static List<AbstractPreferenceController> buildPreferenceControllers(Context context) {
         final List<AbstractPreferenceController> controllers = new ArrayList<>();
         controllers.add(new AppsPreferenceController(context));
         return controllers;
+    }
+
+    @Override
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
+
+        final PreferenceScreen screen = getPreferenceScreen();
+
+        mQuickSwitchLauncherPref = findPreference(QUICKSWITCH_LAUNCHER_KEY);
+        initQuickSwitchLauncherPref();
+        mQuickSwitchLauncherPref.setOnPreferenceChangeListener(this);
+    }
+
+    private void initQuickSwitchLauncherPref() {
+        preferences = getContext().getSharedPreferences("system_property_store_"
+                + String.valueOf(mQuickSwitchLauncherPref.getKey()), Context.MODE_PRIVATE);
+        String savedValue = preferences.getString(mQuickSwitchLauncherPref.getKey(), null);
+        if (savedValue != null) {
+            mQuickSwitchLauncherPref.setValue(savedValue);
+            mQuickSwitchLauncherPref.setSummary("%s");
+        } else {
+            mQuickSwitchLauncherPref.setSummary(R.string.quickswitch_launcher_summary);
+        }
+    }
+
+   @Override
+    public boolean onPreferenceChange(Preference preference, Object newValue) {
+        ContentResolver resolver = getContext().getContentResolver();
+        if (preference == mQuickSwitchLauncherPref) {
+            int value = Integer.parseInt((String) newValue);
+            String[] launcherPackages = getContext().getResources().
+                    getStringArray(com.android.internal.R.array.config_launcherPackages);
+            final String defaultHomePackage = launcherPackages[value];
+            if (PixeldustUtils.isPackageInstalled(getContext(), defaultHomePackage)) {
+                SharedPreferences.Editor editor = preferences.edit();
+                editor.putString(mQuickSwitchLauncherPref.getKey(), defaultHomePackage);
+                editor.apply();
+                SystemProperties.set(SYS_DEFAULT_LAUNCHER_KEY, defaultHomePackage);
+                systemUtils.showSystemRestartDialog(getContext());
+                return true;
+            } else {
+                Toast.makeText(getActivity(),
+                        (R.string.quickswitch_launcher_toast),
+                        Toast.LENGTH_LONG).show();
+            }
+        }
+        return false;
     }
 
     @Override

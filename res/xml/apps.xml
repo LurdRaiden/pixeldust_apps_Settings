@@ -62,8 +62,8 @@
         <intent android:action="android.settings.MANAGE_DEFAULT_APPS_SETTINGS"/>
     </Preference>
 
-    <com.pixeldust.support.preference.SystemPropertyListPreference
-        android:key="persist.sys.default_launcher"
+    <ListPreference
+        android:key="quickswitch_default_launcher"
         android:title="@string/quickswitch_launcher_title"
         android:entries="@array/quickswitch_launcher_entries"
         android:entryValues="@array/quickswitch_launcher_values"
