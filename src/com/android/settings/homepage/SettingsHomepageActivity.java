@@ -48,6 +48,8 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.Toolbar;
 
+import android.provider.Settings.System;
+
 import androidx.annotation.VisibleForTesting;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -84,6 +86,8 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         CategoryMixin.CategoryHandler {
 
     private static final String TAG = "SettingsHomepageActivity";
+    private static final int DASHBOARD_AOSP_STYLE = 0;
+    private static final int DASHBOARD_DEFAULT_STYLE = 1;
 
     // Additional extra of Settings#ACTION_SETTINGS_LARGE_SCREEN_DEEP_LINK.
     // Put true value to the intent when startActivity for a deep link intent from this Activity.
@@ -196,7 +200,11 @@ public class SettingsHomepageActivity extends FragmentActivity implements
         }
 
         setupEdgeToEdge();
-        setContentView(R.layout.settings_homepage_container);
+        int mStyle = System.getIntForUser(getContentResolver(),
+                System.SETTINGS_DASHBOARD_STYLE, DASHBOARD_DEFAULT_STYLE,
+                UserHandle.USER_CURRENT);
+        setContentView(mStyle == DASHBOARD_AOSP_STYLE ? R.layout.aosp_settings_homepage_container :
+                R.layout.settings_homepage_container);
 
         mIsTwoPane = ActivityEmbeddingUtils.isAlreadyEmbedded(this);
 

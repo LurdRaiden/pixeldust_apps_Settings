@@ -4,6 +4,12 @@
      SPDX-License-Identifier: Apache-2.0
 -->
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Settings dashboard style -->
+    <string name="settings_dashboard_style_title">Settings style</string>
+    <string name="settings_dashboard_style_summary">Settings homepage and UI style</string>
+    <string name="settings_dashboard_style_aosp">AOSP</string>
+    <string name="settings_dashboard_style_dot">DoT</string>
+    
     <!-- Default getTimeSpentInApp string for Wellbeing to display. [CHAR LIMIT=NONE] -->
     <string name="duration_less_than_one_minute">Less than 1 minute</string>
     <!-- Summary for Wellbeing screen time usage. [CHAR LIMIT=NONE] -->
