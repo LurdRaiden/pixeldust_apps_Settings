@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2019-2023 Evolution X
+     SPDX-License-Identifier: Apache-2.0
+-->
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:settings="http://schemas.android.com/apk/res/com.android.settings"
+    android:title="@string/pixeldust_dashboard_title">
+
+    <Preference
+        android:key="theme_customization_summary"
+        android:title="@string/theme_customization_category"
+        android:summary="@string/theme_customization_summary"
+        android:icon="@drawable/ic_settings_themes"
+        android:order="-100"
+        android:fragment="com.pixeldust.settings.themes.ThemeSettings"
+        settings:controller="com.pixeldust.settings.themes.ThemeSettingsPreferenceController"/>
+
+    <Preference
+        android:key="quicksettings_settings"
+        android:title="@string/quicksettings_settings_title"
+        android:summary="@string/quicksettings_settings_summary"
+        android:icon="@drawable/ic_settings_quicksettings"
+        android:order="-95"
+        android:fragment="com.pixeldust.settings.quicksettings.QuicksettingsSettings"/>
+        
+    <Preference
+        android:key="pulse_settings"
+        android:title="@string/pulse_settings"
+        android:summary="@string/pulse_settings_summary"
+        android:icon="@drawable/ic_settings_pulse"
+        android:order="-90"
+        android:fragment="com.pixeldust.settings.pulse.PulseSettings" />
+
+<Preference
+        android:key="general_settings"
+        android:title="@string/general_settings_title"
+        android:summary="@string/general_settings_summary"
+        android:icon="@drawable/ic_settings_pixeldust"
+        android:order="-85"
+        android:fragment="com.pixeldust.settings.tweaks.GeneralSettings"/>
+        
+    <Preference
+        android:key="status_bar_settings"
+        android:title="@string/status_bar_settings_title"
+        android:summary="@string/status_bar_settings_summary"
+        android:icon="@drawable/ic_settings_statusbar"
+        android:order="-80"
+        android:fragment="com.pixeldust.settings.statusbar.StatusBarSettings"/>
+</PreferenceScreen>

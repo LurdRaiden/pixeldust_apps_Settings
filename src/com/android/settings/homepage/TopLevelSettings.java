@@ -265,7 +265,7 @@ public class TopLevelSettings extends DashboardFragment implements SplitLayoutLi
                         || key.equals("top_level_display")
                         || key.equals("top_level_location")   
                         || key.equals("top_level_connected_devices")
-                        || key.equals("top_level_pixel_settings")
+                        || key.equals("top_level_pixeldust_settings")
                         || key.equals("top_level_privacy")
                         || key.equals("top_level_accessibility")
                         || key.equals("top_level_wellbeing")
