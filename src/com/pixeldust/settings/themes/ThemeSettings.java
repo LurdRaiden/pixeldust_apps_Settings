@@ -18,13 +18,18 @@ import androidx.preference.ListPreference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.Preference;
 
+import androidx.preference.ListPreference;
 import com.android.internal.logging.nano.MetricsProto.MetricsEvent;
 import com.android.settings.R;
 import com.android.settings.dashboard.DashboardFragment;
 import com.android.internal.util.custom.ThemeUtils;
 import com.android.settings.search.BaseSearchIndexProvider;
 import com.android.settingslib.search.SearchIndexable;
-
+import androidx.preference.Preference;
+import android.os.Bundle;
+import android.content.Context;
+import androidx.preference.PreferenceScreen;
+import com.android.internal.util.pixeldust.PixeldustUtils;
 import java.util.Arrays;
 import java.util.List;
 
@@ -33,7 +38,9 @@ public class ThemeSettings extends DashboardFragment implements OnPreferenceChan
 
     private static final String TAG = "ThemeSettings";
     private static final String KEY_QS_PANEL_STYLE  = "qs_panel_style";
+    private static final String KEY_DASHBOARD_STYLE = "settings_dashboard_style";
 
+    private ListPreference mDashBoardStyle;
     private Handler mHandler;
     private ListPreference mQsStyle;
     private ThemeUtils mThemeUtils;
@@ -41,11 +48,13 @@ public class ThemeSettings extends DashboardFragment implements OnPreferenceChan
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+         final PreferenceScreen prefScreen = getPreferenceScreen();
         mThemeUtils = new ThemeUtils(getActivity());
 
         mQsStyle = (ListPreference) findPreference(KEY_QS_PANEL_STYLE);
         mCustomSettingsObserver.observe();
+        mDashBoardStyle = (ListPreference) prefScreen.findPreference(KEY_DASHBOARD_STYLE);
+        mDashBoardStyle.setOnPreferenceChangeListener(this);
     }
 
     private CustomSettingsObserver mCustomSettingsObserver = new CustomSettingsObserver(mHandler);
@@ -86,6 +95,10 @@ public class ThemeSettings extends DashboardFragment implements OnPreferenceChan
         if (preference == mQsStyle) {
            mCustomSettingsObserver.observe();
            return true;
+        }
+        if (preference == mDashBoardStyle) {
+            PixeldustUtils.showSettingsRestartDialog(getContext());
+            return true;
         }
         return false;
     }
