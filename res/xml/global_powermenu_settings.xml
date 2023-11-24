@@ -66,4 +66,9 @@
             android:title="@string/global_actions_device_controls"
             android:defaultValue="false" />
 
+        <com.pixeldust.support.preference.SystemSettingSwitchPreference
+            android:key="global_actions_powermenu_torch"
+            android:title="@string/global_actions_powermenu_torch"
+            android:defaultValue="false" />
+
 </PreferenceScreen>
