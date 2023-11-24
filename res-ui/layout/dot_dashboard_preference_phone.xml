@@ -64,7 +64,7 @@
             android:layout_height="wrap_content"
             android:ellipsize="marquee"
             android:singleLine="true"
-            style="@color/pixeldust_color_accent2 />
+            style="@color/pixeldust_color_accent2" />
 
         <TextView
             android:id="@android:id/summary"
