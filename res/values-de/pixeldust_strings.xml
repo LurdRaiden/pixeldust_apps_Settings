@@ -121,22 +121,11 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
 
     <!-- Lock screen media artwork -->
     <string name="lockscreen_media_art_options_title">Medienbenachrichtigung</string>
-    <string name="lockscreen_album_media_art_toggle">Mediengrafik</string>
-    <string name="lockscreen_album_media_art_summary">Mediengrafiken anzeigen, wenn verfügbar</string>
+    <string name="lockscreen_media_metadata_toggle">Mediengrafik</string>
+    <string name="lockscreen_media_metadata_summary">Mediengrafiken anzeigen, wenn verfügbar</string>
 
-    <!-- Lock screen album art filter -->
-    <string name="lockscreen_albumart_filter_title">Filtereinstellungen</string>
-    <string name="lockscreen_albumart_filter_none">Kein Filter</string>
-    <string name="lockscreen_albumart_filter_grayscale">Graustufen</string>
-    <string name="lockscreen_albumart_filter_tint">Akzent getönt</string>
-    <string name="lockscreen_albumart_filter_blur">Unschärfe</string>
-    <string name="lockscreen_albumart_filter_grayblur">Graustufen und unscharf</string>
-
-    <string name="artwork_media_background_enable_blur_title">Unschärfe für Mediengrafiken</string>
-    <string name="artwork_media_background_blur_radius_title">Unschärfegrad für Mediengrafiken</string>
-    <string name="media_artwork_fade_percent_title">Verblassungsgrad für Mediengrafiken</string>
-    <string name="lockscreen_albumart_filter_blur_radius_title">Unschärfegrad von Mediengrafiken</string>
-    <string name="ls_media_artwork_fade_percent_title">Verblassungsgrad für Mediengrafiken auf dem Sperrbildschirm</string>
+    <!-- Lockscreen album art filter -->
+    <string name="lockscreen_media_blur_title">Unschärfegrad einstellen</string>
 
     <!-- Preference and settings suggestion title text for screen off UDFPS  (device) [CHAR LIMIT=60]-->
     <string name="ambient_display_screen_off_udfps_title">Fingerabdrucksensor lange drücken, um das Gerät zu entsperren</string>
