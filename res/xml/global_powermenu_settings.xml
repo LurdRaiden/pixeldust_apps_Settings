@@ -52,11 +52,6 @@
             android:defaultValue="false" />
 
         <com.pixeldust.support.preference.SystemSettingSwitchPreference
-            android:key="global_actions_soundpanel"
-            android:title="@string/global_actions_soundpanel"
-            android:defaultValue="false" />
-
-        <com.pixeldust.support.preference.SystemSettingSwitchPreference
             android:key="global_actions_settings"
             android:title="@string/global_actions_settings"
             android:defaultValue="false" />

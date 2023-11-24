@@ -365,7 +365,6 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="global_actions_users">Benutzer wechseln</string>
     <string name="global_actions_screenshot">Bildschirmfoto</string>
     <string name="global_actions_airplane">Flugmodus</string>
-    <string name="global_actions_soundpanel">Soundpanel</string>
     <string name="global_actions_settings">Einstellungen</string>
     <string name="global_actions_device_controls">Gerätesteuerung</string>
     <string name="global_actions_powermenu_torch">Taschenlampe</string>
