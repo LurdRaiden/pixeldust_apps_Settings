@@ -322,8 +322,8 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="hide_lockscreen_status_bar_summary">Statusleiste auf dem Sperrbildschirm ausblenden</string>
 
     <!-- Statusbar Clock -->
-    <string name="clock_category_title">Uhranzeige</string>
-    <string name="status_bar_clock_title">Uhranzeige anpassen</string>
+    <string name="clock_category_title">Uhr- und Datumsanzeige</string>
+    <string name="status_bar_clock_title">Uhr- und Datumsanzeige anpassen</string>
     <string name="status_bar_clock_summary">Position und Hintergrundchip</string>
     <string name="statusbar_clock_chip_title">Hintergrundchip anzeigen</string>
     <string name="statusbar_clock_chip_summary">Akzentfarbigen Chip hinter der Uhr anzeigen</string>
@@ -344,6 +344,26 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <!-- Clock show seconds -->
     <string name="status_bar_clock_show_seconds_title">Sekundenanzeige</string>
     <string name="status_bar_clock_show_seconds_desc">Stunden, Minuten und Sekunden anzeigen</string>
+
+    <!-- SB clock date options -->
+    <string name="enable_clock_weekday">Wochentag</string>
+    <string name="enable_clock_weekday_summary">Abgekürzter Wochentag vor der Uhrzeit anzeigen</string>
+    <string name="dont_show">Nicht anzeigen</string>
+    <string name="clock_date_display">Datum</string>
+    <string name="clock_date_display_summary">Benutzerdefiniertes Datum vor der Uhrzeit anzeigen</string>
+    <string name="clock_date_style">Datum Schriftstil</string>
+    <string name="clock_date_format">Datumsformat</string>
+    <string name="clock_date_string_edittext_title">Eingabe nur im vorgegebenen Datumsformat möglich, z.B. MM/TT/JJ</string>
+    <string name="clock_date_string_edittext_summary">Zeichenfolge eingeben</string>
+    <string name="clock_date_display_none">Nicht anzeigen</string>
+    <string name="clock_date_display_small">Kleine Schrift</string>
+    <string name="clock_date_display_normal">Normale Schrift</string>
+    <string name="clock_date_style_normal">Normal</string>
+    <string name="clock_date_style_lowercase">Kleinbuchstaben</string>
+    <string name="clock_date_style_uppercase">Großbuchstaben</string>
+    <string name="clock_date_right">Rechts neben der Uhrzeit</string>
+    <string name="clock_date_left">Links neben der Uhrzeit</string>
+    <string name="clock_date_position">Position der Datumsanzeige</string>
 
     <!-- Brightness slider styles -->
     <string name="theme_customization_brightness_slider_title">Helligkeitsregler</string>

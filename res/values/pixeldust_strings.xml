@@ -329,8 +329,8 @@ When the screen is off, the torch can be enabled with one of the following key c
     <string name="hide_lockscreen_status_bar_summary">Hide status bar on lock screen</string>
 
     <!-- Statusbar Clock -->
-    <string name="clock_category_title">Clock</string>
-    <string name="status_bar_clock_title">Clock customization</string>
+    <string name="clock_category_title">Clock &amp; date</string>
+    <string name="status_bar_clock_title">Clock &amp; date customization</string>
     <string name="status_bar_clock_summary">Change position and background chip</string>
     <string name="statusbar_clock_chip_title">Background chip</string>
     <string name="statusbar_clock_chip_summary">Display accented chip behind clock</string>
@@ -351,6 +351,26 @@ When the screen is off, the torch can be enabled with one of the following key c
     <!-- Clock show seconds -->
     <string name="status_bar_clock_show_seconds_title">Clock show seconds</string>
     <string name="status_bar_clock_show_seconds_desc">Show hours, minutes, and seconds</string>
+
+    <!-- Clock date options -->
+    <string name="enable_clock_weekday">Day of the week</string>
+    <string name="enable_clock_weekday_summary">Abbreviated day of the week before the time</string>
+    <string name="dont_show">Don\'t show</string>
+    <string name="clock_date_display">Date</string>
+    <string name="clock_date_display_summary">Display custom date before the clock</string>
+    <string name="clock_date_style">Date style</string>
+    <string name="clock_date_format">Date format</string>
+    <string name="clock_date_string_edittext_title">Must be in DateFormat eg. MM/dd/yy</string>
+    <string name="clock_date_string_edittext_summary">Enter string</string>
+    <string name="clock_date_display_none">Don\'t show</string>
+    <string name="clock_date_display_small">Small font size</string>
+    <string name="clock_date_display_normal">Normal font size</string>
+    <string name="clock_date_style_normal">Normal</string>
+    <string name="clock_date_style_lowercase">Lowercase</string>
+    <string name="clock_date_style_uppercase">Uppercase</string>
+    <string name="clock_date_right">Right of time</string>
+    <string name="clock_date_left">Left of time</string>
+    <string name="clock_date_position">Date position</string>
 
     <!-- Brightness slider styles -->
     <string name="theme_customization_brightness_slider_title">Brightness slider style</string>
