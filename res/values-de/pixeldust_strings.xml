@@ -321,10 +321,25 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="hide_lockscreen_status_bar_title">Statusleiste ausblenden</string>
     <string name="hide_lockscreen_status_bar_summary">Statusleiste auf dem Sperrbildschirm ausblenden</string>
 
-    <!-- Statusbar Clock background chip -->
+    <!-- Statusbar Clock -->
     <string name="clock_category_title">Uhranzeige</string>
+    <string name="status_bar_clock_title">Uhranzeige anpassen</string>
+    <string name="status_bar_clock_summary">Position und Hintergrundchip</string>
     <string name="statusbar_clock_chip_title">Hintergrundchip anzeigen</string>
     <string name="statusbar_clock_chip_summary">Akzentfarbigen Chip hinter der Uhr anzeigen</string>
+
+    <!-- Clock position -->
+    <string name="status_bar_clock_position_center">Zentriert</string>
+    <string name="status_bar_clock_position_left">Links</string>
+    <string name="status_bar_clock_position_right">Rechts</string>
+    <string name="status_bar_clock_position_title">Position der Uhr</string>
+
+    <!-- Clock AM/PM -->
+    <string name="status_bar_am_pm_hidden">Ausgeblendet</string>
+    <string name="status_bar_am_pm_normal">Standard</string>
+    <string name="status_bar_am_pm_small">Klein</string>
+    <string name="status_bar_am_pm_title">AM/PM-Format</string>
+    <string name="status_bar_am_pm_unavailable">24-Stunden-Format ist aktiviert</string>
 
     <!-- Brightness slider styles -->
     <string name="theme_customization_brightness_slider_title">Helligkeitsregler</string>
