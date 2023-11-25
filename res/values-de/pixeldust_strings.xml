@@ -373,9 +373,12 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="theme_customization_quicksettings_tiles_title">Schnelleinstellungen</string>
     <string name="theme_customization_quicksettings_tiles_summary">Stil für die QS-Kacheln festlegen</string>
 
-    <!-- Island notification reTicker -->
-    <string name="island_notification_title">Island Notification reTicker</string>
-    <string name="island_notification_summary">Ersetzt Pop-up-Benachrichtigungen durch eine schlanke und weniger aufdringliche Variante</string>
+    <!-- Island notification -->
+    <string name="island_notification_title">Island-Benachrichtigungen</string>
+    <string name="island_notification_summary">Pop-up-Benachrichtigungen werden im Stil von Dynamic Island (bekannt von iOS) angezeigt.</string>
+    <string name="island_notification_footer_text">
+        Island-Benachrichtigungen sind an das Dynamic Island-Feature von iOS angelehnt und ersetzen die Pop-up-Benachrichtigungen von Android durch eine schneller zugängliche und kompakte Variante.\nFolgende Schnellzugriffsaktionen sind möglich:\n1. Auf die Inselbenachrichtigung tippen, um schnell Anrufe anzunehmen.\n2. Lange auf die Island-Benachrichtigung drücken, um Anrufe abzulehnen.\n3. Lange auf die Island-Benachrichtigung drücken, um die Vorschau zu erweitern.
+    </string>
 
     <!-- Statusbar colored icons -->
     <string name="statusbar_colored_icons_title">Ausgefüllte Symbole</string>
