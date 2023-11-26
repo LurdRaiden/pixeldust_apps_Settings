@@ -178,7 +178,7 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
 
     <!-- Gesture navbar length -->
     <string name="gesture_navbar_length_title">Größe der Pille</string>
-    <string name="hide_label">Unsichtbar</string>
+    <string name="short_label">Kurz</string>
     <string name="long_label">Lang</string>
 
     <!-- Back gesture height -->
