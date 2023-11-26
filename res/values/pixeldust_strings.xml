@@ -336,10 +336,11 @@ When the screen is off, the torch can be enabled with one of the following key c
     <string name="statusbar_clock_chip_summary">Display accented chip behind clock</string>
 
     <!-- Clock position -->
+    <string name="status_bar_clock_position_title">Clock position</string>
     <string name="status_bar_clock_position_center">Center</string>
     <string name="status_bar_clock_position_left">Left</string>
     <string name="status_bar_clock_position_right">Right</string>
-    <string name="status_bar_clock_position_title">Clock position</string>
+    <string name="status_bar_clock_position_hidden">Hidden</string>
 
     <!-- Clock AM/PM -->
     <string name="status_bar_am_pm_hidden">Hidden</string>
