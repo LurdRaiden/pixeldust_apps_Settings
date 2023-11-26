@@ -406,4 +406,8 @@ When the screen is off, the torch can be enabled with one of the following key c
     <string name="global_actions_settings">Settings</string>
     <string name="global_actions_device_controls">Device control</string>
     <string name="global_actions_powermenu_torch">Flashlight</string>
+
+    <!-- Gaming mode -->
+    <string name="gaming_mode_title">Game space</string>
+    <string name="gaming_mode_summary">Extra features for immersive gaming experience</string>
 </resources>

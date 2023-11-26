@@ -399,4 +399,8 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <string name="global_actions_settings">Einstellungen</string>
     <string name="global_actions_device_controls">Gerätesteuerung</string>
     <string name="global_actions_powermenu_torch">Taschenlampe</string>
+
+    <!-- Gaming mode -->
+    <string name="gaming_mode_title">Game Space</string>
+    <string name="gaming_mode_summary">Optionen für ein beeindruckendes Spielerlebnis</string>
 </resources>
