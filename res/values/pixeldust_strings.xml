@@ -456,4 +456,8 @@ When the screen is off, the torch can be enabled with one of the following key c
     <!-- QS categories titles -->
     <string name="qs_panel_category_title">Panel</string>
     <string name="qs_tiles_category_title">Tiles layout</string>
+
+    <!-- Pif -->
+    <string name="pif_title">Play integrity fix</string>
+    <string name="pif_summary">View current values used to spoof GMS</string>
 </resources>

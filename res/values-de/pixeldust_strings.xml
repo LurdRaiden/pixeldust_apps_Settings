@@ -450,4 +450,8 @@ Bei ausgeschaltetem Display lässt sich die Taschenlampe durch eine der folgende
     <!-- QS categories titles -->
     <string name="qs_panel_category_title">Panel</string>
     <string name="qs_tiles_category_title">Kachel-Layout</string>
+
+    <!-- Pif -->
+    <string name="pif_title">Play integrity fix</string>
+    <string name="pif_summary">Aktuelle GMS-Spoofing Konfiguration anzeigen</string>
 </resources>
