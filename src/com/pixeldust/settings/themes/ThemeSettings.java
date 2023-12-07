@@ -29,7 +29,6 @@ import androidx.preference.Preference;
 import android.os.Bundle;
 import android.content.Context;
 import androidx.preference.PreferenceScreen;
-import com.android.internal.util.pixeldust.PixeldustUtils;
 import java.util.Arrays;
 import java.util.List;
 
@@ -97,7 +96,7 @@ public class ThemeSettings extends DashboardFragment implements OnPreferenceChan
            return true;
         }
         if (preference == mDashBoardStyle) {
-            PixeldustUtils.showSettingsRestartDialog(getContext());
+            ThemeUtils.showSettingsRestartDialog(getContext());
             return true;
         }
         return false;
