@@ -24,6 +24,14 @@
         android:dependency="dark_ui_mode"
         android:defaultValue="false" />
 
+         <com.pixeldust.settings.SystemSettingListPreference
+            android:key="settings_dashboard_style"
+            android:title="@string/settings_dashboard_style_title"
+            android:entries="@array/settings_dashboard_style_entries"
+            android:entryValues="@array/settings_dashboard_style_values"
+            android:summary="@string/settings_dashboard_style_summary"
+            android:defaultValue="2" />
+            
     <Preference
         android:key="monet_settings"
         android:title="@string/monet_settings_title"
