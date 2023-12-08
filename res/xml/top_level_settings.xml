@@ -22,6 +22,15 @@
     android:title="Settings">
 
     <com.android.settings.widget.HomepagePreference
+        android:key="top_level_pixeldust_settings"
+        android:icon="@drawable/ic_settings_pixeldust"
+        android:title="@string/pixeldust_dashboard_title"
+        android:summary="@string/pixeldust_dashboard_summary"
+        android:order="-204"
+        settings:layout="@layout/dot_dashboard_preference_bottom"
+        android:fragment="com.pixeldust.settings.PixelDustSettings" />
+
+    <com.android.settings.widget.HomepagePreference
         android:fragment="com.android.settings.network.NetworkDashboardFragment"
         android:icon="@drawable/ic_settings_wireless"
         android:key="top_level_network"
